@@ -2,8 +2,10 @@ library(vcfR,quietly = T)
 library(tidyr,quietly = T)
 library(stringr,quietly = T)
 
+args = commandArgs(trailingOnly=TRUE)
 
-CHR = "chr22"
+CHR = args[1]
+
 CoRSIV_BED <- read.table("../../GLOBAL_BED_FILES/combined_corsivs.bed")
 CoRSIV_Haplotype_BED <- read.table("../LOCAL_BED_FILES/haplotypes_over_CoRSIVs.bed")
 methylation_data <- read.csv("../../../CoRSIV_Capture/USC_pediatric_glioma_CoRSIV_Methylation_Data_10x_Depth_merged_reads.csv")
