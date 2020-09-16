@@ -47,7 +47,7 @@ for (CoRSIV_ID in unique(as.character(haplotype_CoRSIVs$V10))){
 }
 
 
-write.table(file = paste0("spearman_R_",CHR,".txt"),data.frame(unique(as.character(haplotype_CoRSIVs$V10)),r_values))
+write.table(file = paste0("spearman_R_",CHR,".txt"),data.frame(unique(as.character(haplotype_CoRSIVs$V10)),r_values),row.names = FALSE,quote = F)
 
 
 
